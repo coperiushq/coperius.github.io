@@ -41,13 +41,23 @@
 
         <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"8b208e9547eed8ee9be311988","lid":"0debfcd56d"}) })</script>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119665186-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-119665186-1');
+        <script type="text/javascript" src="/tarteaucitron/tarteaucitron.js"></script>
+
+        <script type="text/javascript">
+          tarteaucitron.init({
+              "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
+              "highPrivacy": false, /* désactiver le consentement implicite (en naviguant) ? */
+              "orientation": "top", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+              "adblocker": false, /* Afficher un message si un adblocker est détecté */
+              "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
+              "cookieslist": true, /* Afficher la liste des cookies installés ? */
+              "removeCredit": false /* supprimer le lien vers la source ? */
+          });
+        </script>
+        <script type="text/javascript">
+          tarteaucitron.user.gtagUa = 'UA-119665186-1';
+          tarteaucitron.user.gtagMore = function () { /* add here your optionnal gtag() */ };
+          (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
         </script>
     </body>
 </html>
