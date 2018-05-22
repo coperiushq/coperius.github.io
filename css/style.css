@@ -39,3 +39,8 @@ h3 {
 a {
     color: #FFF;
 }
+
+a:hover {
+    color: #8CEBEF;
+    text-decoration: none;
+}
